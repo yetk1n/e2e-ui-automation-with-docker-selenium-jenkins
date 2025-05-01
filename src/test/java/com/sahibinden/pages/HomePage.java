@@ -7,7 +7,7 @@ public class HomePage extends BasePage {
 
     private final By aracDegerlemeLink = By.linkText("Araç Değerleme");
     private final By tumunuGosterLabel = By.cssSelector("label.open-categories[for='category-auto360']");
-
+    private final By cookiesAcceptButton = By.cssSelector("#onetrust-accept-btn-handler")
     // Locators for mobile
     private final By servislerTabMobile = By.cssSelector("a[track-label='altbar_servisler']");
 
@@ -21,7 +21,6 @@ public class HomePage extends BasePage {
     }
 
     public void acceptCookiesIfPresent() {
-        By cookiesAcceptButton = By.cssSelector("#onetrust-accept-btn-handler");
         if (isElementDisplayed(cookiesAcceptButton)) {
             click(cookiesAcceptButton);
         }
