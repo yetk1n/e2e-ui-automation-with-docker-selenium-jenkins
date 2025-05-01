@@ -49,6 +49,7 @@ public class DriverManager {
                     chromeOptions.addArguments("--headless=new");
                 }
                 if (isRemote) {
+                    chromeOptions.addArguments("--headless=new");
                     webDriver = createRemoteWebDriver(chromeOptions);
                 } else {
                     // Use Selenium's built-in manager (no setup call needed)
